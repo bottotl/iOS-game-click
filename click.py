@@ -305,6 +305,51 @@ def muqing2(d):
 	click_image(d, "jixu.750x1334.png")
 	click_image(d, "jixu.750x1334.png")
 	click_image(d, "queding.750x1334.png")
+
+def yaoposhijing(d):
+	enter_huodong(d);
+	click_image(d, "yaoposhijing.750x1334.png")
+	time.sleep(2)
+	click(d, 122, 1046)
+	buchongtili(d)
+	if click_image(d, "qianwangshijing.750x1334.png"):
+		time.sleep(2)
+		print("start chose zhuzhan")
+		while 1:
+			buchongtili(d)
+			# if click_image(d, "level5.750x1334.png"):
+			# 	print("chose level5")
+			# 	time.sleep(1);
+			# 	break;
+			# elif click_image(d, "10_10.750x1334.png"):
+			# 	print("chose 10 10")
+			# 	time.sleep(1);
+			# 	break;
+			# elif click_image(d, "level4.750x1334.png"):
+			# 	print("chose level4")
+			# 	break;
+			# elif click_image(d, "level3.750x1334.png"):
+			# 	print("chose level3")
+			# 	break;
+			# else :
+			# 	pass;
+			print("rechose")
+			click(d, 336, 314)#点第一个
+			time.sleep(1)
+			break;
+
+		while 1:
+			print("start kaiqifuben")
+			buchongtili(d)
+			if click_image(d, "kaiqifuben.750x1334.png"):
+				print("did start kaiqifuben")
+				break;
+
+		gongji(d)
+		
+	click_image(d, "jixu.750x1334.png")
+	click_image(d, "jixu.750x1334.png")
+	click_image(d, "queding.750x1334.png")
 	
 def shuye_jinmu(d):
 	enter_huodong(d);
@@ -350,12 +395,56 @@ def shuye_jinmu(d):
 	click_image(d, "jixu.750x1334.png")
 	click_image(d, "queding.750x1334.png")
 	
+def cucai_jin(d):
+	enter_huodong(d);
+	click_image(d, "wuxingxiulian.750x1334.png")
+	swipe(d, 98, 1038, 572, 1046)
+	click(d, 93, 1012)#素材金特级
+	buchongtili(d)
+	if click_image(d, "kaishixiulian.750x1334.png"):
+		time.sleep(2)
+		print("start chose zhuzhan")
+		while 1:
+			buchongtili(d)
+			# if click_image(d, "level5.750x1334.png"):
+			# 	print("chose level5")
+			# 	time.sleep(1);
+			# 	break;
+			# elif click_image(d, "10_10.750x1334.png"):
+			# 	print("chose 10 10")
+			# 	time.sleep(1);
+			# 	break;
+			# elif click_image(d, "level4.750x1334.png"):
+			# 	print("chose level4")
+			# 	break;
+			# elif click_image(d, "level3.750x1334.png"):
+			# 	print("chose level3")
+			# 	break;
+			# else :
+			# 	pass;
+			print("rechose")
+			click(d, 336, 314)#点第一个
+			time.sleep(1)
+			break;
 
-d = atx.connect('http://192.168.0.102:8100', platform='ios') # platform也可以不指定
+		while 1:
+			print("start kaiqifuben")
+			buchongtili(d)
+			if click_image(d, "kaiqifuben.750x1334.png"):
+				print("did start kaiqifuben")
+				break;
+
+		gongji(d)
+		
+	click_image(d, "jixu.750x1334.png")
+	click_image(d, "jixu.750x1334.png")
+	click_image(d, "queding.750x1334.png")
+
+d = atx.connect('http://172.16.44.19:8100', platform='ios') # platform也可以不指定
 print d.rotation
 dis = d.display
 while 1:
-	muqing2(d)
+	cucai_jin(d)
 
 
 #d.click_image("tiaozhan.1334x750.png")
